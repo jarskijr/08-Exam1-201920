@@ -42,6 +42,7 @@ def run_test_problem1():
     problem1(square, 6, window)
     window.continue_on_mouse_click()
 
+
     # Test 2:
     square = rg.Square(rg.Point(250, 100), 100)
     square.fill_color = 'cyan'
@@ -59,11 +60,28 @@ def run_test_problem1():
     square = rg.Square(rg.Point(150, 125), 150)
     square.fill_color = 'yellow'
 
+
     problem1(square, 15, window)
     window.close_on_mouse_click()
 
 
+
 def problem1(square, thickness, window):
+    square.attach_to(window)
+    circle = rg.Circle(rg.Point(square.center.x, square.center.y + square.length_of_each_side ), (square.length_of_each_side / 2))
+    circle.attach_to(window)
+    circle.outline_color = square.outline_color
+    circle.outline_thickness = thickness
+    circle.fill_color = square.fill_color
+    line = rg.Line(
+        rg.Point(square.center.x - (square.length_of_each_side/2), square.center.y),
+        rg.Point(circle.center.x, circle.center.y)
+    )
+
+    line.attach_to(window)
+    line.thickness = thickness
+    line.color = square.outline_color
+    window.render()
     """
     See   problem1_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -104,8 +122,6 @@ def problem1(square, thickness, window):
     # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
-
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------

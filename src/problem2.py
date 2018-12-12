@@ -8,6 +8,8 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 
 def main():
+
+
     """ Calls the   TEST   functions in this module. """
     test_factor_sum()
 
@@ -15,7 +17,7 @@ def main():
 def test_factor_sum():
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  DONE: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
@@ -43,6 +45,55 @@ def test_factor_sum():
 
     ###########################################################################
     # WRITE YOUR TESTS BELOW HERE:
+    # Test 1: 28
+    print('Test 1')
+    print('Testing 28')
+    print()
+    expected = 11
+    actual = factor_sum(28)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+    print()
+
+    # Test 2: 6
+    print('Test 2')
+    print('Testing 6')
+    print()
+    expected = 3
+    actual = factor_sum(6)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+    print()
+
+    # Test 3: 12
+    print('Test 3')
+    print('Testing 12')
+    print()
+    expected = 10
+    actual = factor_sum(12)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+    print()
+
+    # Test 4: 25
+    print('Test 4')
+    print('Testing 25')
+    print()
+    expected = 4
+    actual = factor_sum(25)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+    print()
+
+    # Test 5:
+    print('Test 5')
+    print('Testing 125')
+    print()
+    expected = 12
+    actual = factor_sum(125)
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+    print()
     ###########################################################################
 
 
@@ -78,3 +129,6 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+
+
+main()
